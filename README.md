@@ -1,22 +1,20 @@
 # PRUEBA TECNICA SOFTTEK
 
-Ruta del swagger en version 3               , solo se declaro el file en
 
-```
-./swagger.yml
-```
-
-
-La version 3
-https://app.swaggerhub.com/apis-docs/Arnold-93/PRUEBA-TECNICA/1.0.0
-  
-
-Nota: Los serivicios fueron creados de manera exitosa utilizando algunos de los princiops SOLID(Singel Responsability Principle), para tener una documentacion mas accesible se tuvo que haber instalado swagger-jsdoc y swagger-ui-express, para poder crear un endpoint para que muestre el swagger.
+Nota: Los servicios fueron creados de manera exitosa utilizando algunos de los principios SOLID(Singel Responsability Principle), para tener una documentación más accesible se tuvo que haber instalado swagger-jsdoc y swagger-ui-express, para poder crear un endpoint para que muestre el swagger.
 
 
 PD: se agrego a un servicio temporal para poder mostrar las api en swagger de manera publica,
 desplegar combo servers y seleccionar https://lqksv30jph.execute-api.us-east-1.amazonaws.com/dev para su ejecucion.
 
+
+Ruta del swagger en version 3               , solo se declaro el file en
+
+```
+./swagger.yml
+```
+La version 3
+https://app.swaggerhub.com/apis-docs/Arnold-93/reto-tecnico/1.0.0
 
 
 ## PEOPLE LIST SWAPI (Lambda)
@@ -54,7 +52,7 @@ GET ```https://lqksv30jph.execute-api.us-east-1.amazonaws.com/dev/api-sw/planet?
 POST ```https://lqksv30jph.execute-api.us-east-1.amazonaws.com/dev/heroe```
 
 ```
-    // Body
+// Body
     {
         "description":"IRON MAN",
         "power":"tecnologia",
@@ -62,7 +60,7 @@ POST ```https://lqksv30jph.execute-api.us-east-1.amazonaws.com/dev/heroe```
         "weakness":"ser pobre"
     }
 
-    // Headers 
+// Headers 
     Content-Type            application/json
 
 ```
