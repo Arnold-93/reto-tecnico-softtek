@@ -9,7 +9,7 @@ const handler: AWSLambda = {
 		{
 			http: {
 				method: "post",
-				path: "heroe"
+				path: "heroes"
 			},
 		},
 	],

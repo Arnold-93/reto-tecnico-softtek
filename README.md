@@ -49,7 +49,7 @@ GET ```https://lqksv30jph.execute-api.us-east-1.amazonaws.com/dev/api-sw/planet?
 
 ## ADD HEROE(DynamoBD)
 
-POST ```https://lqksv30jph.execute-api.us-east-1.amazonaws.com/dev/heroe```
+POST ```https://lqksv30jph.execute-api.us-east-1.amazonaws.com/dev/heroes```
 
 ```
 // Body
