@@ -6,10 +6,10 @@ import {getSwapiAllPeople} from "@libs/swapi/getPeople";
 const getPeople: Handler = async (event: APIGatewayEvent) => {
     try {
         const { queryStringParameters } = event
-        //obtenemoslo que enviamos desde el lambda 
-        console.log(queryStringParameters.lan)
-
-        const response = await getSwapiAllPeople(queryStringParameters.lan);
+        const { lan, idPeople} = queryStringParameters;
+        //obtenemos lo que enviamos desde el lambda 
+        
+        const response = await getSwapiAllPeople(lan, idPeople);
         return formatJSONResponse(response);
     } catch (error) {
         console.log(error);

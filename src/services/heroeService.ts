@@ -52,10 +52,10 @@ export const queryHeroesByParameters = async (parameters: Record<string, any>) =
         expressionAttributeValues[paramValueKey] = parameters[paramName];
         filterExpression += `${paramNameKey} = ${paramValueKey} AND `;
     }
+
     filterExpression = filterExpression.slice(0, -5);
 
     const command =
-
         new ScanCommand({
             TableName: C.TABLE.HEROE_TABLE,
             FilterExpression: filterExpression,
@@ -63,9 +63,8 @@ export const queryHeroesByParameters = async (parameters: Record<string, any>) =
             ExpressionAttributeValues: expressionAttributeValues,
         });
 
-
-
     return await docClient.send(command);
+    
 }
 
 export const getHeroesAllService = async () => {

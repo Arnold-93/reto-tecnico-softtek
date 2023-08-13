@@ -5,7 +5,9 @@ import { getSwapiAllPlanet } from "@libs/swapi/getPlanet";
 
 const getPlanet: Handler = async (event: APIGatewayEvent) => {
     try {
-        const response = await getSwapiAllPlanet(event.queryStringParameters.lan);
+        const { queryStringParameters } = event
+        const { lan, idPlanet} = queryStringParameters;
+        const response = await getSwapiAllPlanet(lan, idPlanet);
         return formatJSONResponse(response);
 
     } catch (error) {

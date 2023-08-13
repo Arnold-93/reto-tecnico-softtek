@@ -11,15 +11,21 @@ La version 3
 https://app.swaggerhub.com/apis-docs/Arnold-93/PRUEBA-TECNICA/1.0.0
   
 
-Nota: Los serivicios fueron creados de manera exitosa, para tener una documentacion mas accesible se tuvo que haber instalado swagger-jsdoc y swagger-ui-express, para poder crear un endpoint para que muestre el swagger.
-.
+Nota: Los serivicios fueron creados de manera exitosa utilizando algunos de los princiops SOLID(Singel Responsability Principle), para tener una documentacion mas accesible se tuvo que haber instalado swagger-jsdoc y swagger-ui-express, para poder crear un endpoint para que muestre el swagger.
+
 
 PD: se agrego a un servicio temporal para poder mostrar las api en swagger de manera publica,
-desplegar combo servers y seleccionar https://lqksv30jph.execute-api.us-east-1.amazonaws.com/dev.
+desplegar combo servers y seleccionar https://lqksv30jph.execute-api.us-east-1.amazonaws.com/dev para su ejecucion.
 
 
 
 ## PEOPLE LIST SWAPI (Lambda)
+
+- enter id people 
+
+GET  ```https://lqksv30jph.execute-api.us-east-1.amazonaws.com/dev/api-sw/people?lan=es&idPeople=13```
+
+GET  ```https://lqksv30jph.execute-api.us-east-1.amazonaws.com/dev/api-sw/people?lan=en&idPeople=13```
 
 - select a language (en:english, and es:spanish)
 
@@ -27,9 +33,15 @@ GET  ```https://lqksv30jph.execute-api.us-east-1.amazonaws.com/dev/api-sw/people
 
 GET  ```https://lqksv30jph.execute-api.us-east-1.amazonaws.com/dev/api-sw/people?lan=en```
 
-
-
 ## PLANETS LIST SWAPI (Lambda)
+
+- enter id planets 
+
+GET ```https://lqksv30jph.execute-api.us-east-1.amazonaws.com/dev/api-sw/planet?lan=es&idPlanet=13```
+
+GET ```https://lqksv30jph.execute-api.us-east-1.amazonaws.com/dev/api-sw/planet?lan=en&idPlanet=13```
+
+- select a language (en:english, and es:spanish)
 
 GET ```https://lqksv30jph.execute-api.us-east-1.amazonaws.com/dev/api-sw/planet?lan=es```
 
@@ -62,6 +74,10 @@ GET ```https://lqksv30jph.execute-api.us-east-1.amazonaws.com/dev/heroes```
 
 GET ```https://lqksv30jph.execute-api.us-east-1.amazonaws.com/dev/heroes?weakness={Estres}&description={HULK}&comic={MARVEL}```
 
+# ------------------------------------------------------------------------------------------------------
+ejcucion de manera local
+* ```npm install ```
+* ```npm start ```
 
 Para poder ejecutar el linter
 

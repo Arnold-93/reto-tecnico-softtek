@@ -1,17 +1,18 @@
 
 import {apiResponse} from "../../utils/response";
 import {Planet} from "../../models/Planet";
-import axios from "axios";
 import { C } from "src/shared/constants";
 import { planetsModel } from "src/utils/model/planetsModel";
+import { planetsResult } from "src/services/planetService";
 
 /**
  *  Funcion para transformar los values de personas a español.
  * **/
-export const getSwapiAllPlanet= async (language = "en") => {
+export const getSwapiAllPlanet= async (language = "en", idPlanet = null) => {
     try {
-        const { data } = await axios.get(`${C.SERVICIOS.URL_SWAPI}/planets/`);
-        const dataResponse: Planet[] = data.results;
+        const { data } = await planetsResult(idPlanet);
+
+        const dataResponse: Planet[] = (idPlanet == null) ? data.results : [data];;
 
         if (dataResponse.length === 0) return apiResponse(data, C.MESSAGE.COMMON.VACIO, 404);
 

@@ -30,6 +30,11 @@ paths:
           required: true
           schema:
             type: string
+        - name: idPeople
+          in: query
+          description: enter a correct id people
+          schema:
+            type: string       
       responses:
         200:
           description: successful operation
@@ -60,6 +65,11 @@ paths:
           required: true
           schema:
             type: string
+        - name: idPlanet
+          in: query
+          description: enter a correct id planet
+          schema:
+            type: string             
       responses:
         200:
           description: successful operation
