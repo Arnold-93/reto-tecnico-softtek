@@ -1,0 +1,269 @@
+openapi: 3.0.1
+info:
+  title: Reto-Tecnico-Softtek
+  description: "\n### Los try Out de la parte inferior de cada endpoint funcionan correctamente solo de la URL DEL SWAGGER DEPLOYADO, que esta en el README.md"
+  version: 1.0.0
+
+externalDocs:
+  description: Repositorio github
+  url: https://github.com/Arnold-93/reto-tecnico-softtek
+
+servers:
+  - url: https://lqksv30jph.execute-api.us-east-1.amazonaws.com/dev/
+
+tags:
+  - name: swapi
+    description: Consultas al api de Swapi.
+  - name: heroe
+    description: Crud heroes app.  
+
+paths:
+  /api-sw/people:
+    get:
+      tags:
+        - swapi
+      summary: lista personas de Swapi
+      parameters:
+        - name: lan
+          in: query
+          description: select a language, example es | en
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  error:
+                    type: string 
+                  message:
+                    type: string     
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/SwappiPeople'
+  /api-sw/planet:
+    get:
+      tags:
+        - swapi
+      summary: lista planetas de Swapi
+      parameters:
+        - name: lan
+          in: query
+          description: select a language, example es | en
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  error:
+                    type: string 
+                  message:
+                    type: string     
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/SwappiPlanet'
+  /heroe:
+    post:
+      tags:
+        - heroe
+      summary: Registrar hereo en la BD DynamoDB
+      requestBody:
+        description: Crear un hereo en la BD DynamoDB
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/HeroeRequest'
+        required: true
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: number  
+                  error:
+                    type: boolean  
+                  message:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      status:
+                        type: string
+                      error:
+                        type: boolean
+                      message:
+                        type: string
+                      data:
+                        $ref: '#/components/schemas/HeroeResponse'
+
+    get:
+      tags:
+        - heroe
+      summary: Listado todos los heroes almacenado en DynamoDB
+      parameters:
+        - name: id
+          in: query
+          description: enter a valid id
+          schema:
+            type: string
+        - name: description
+          in: query
+          description: enter a valid description
+          schema:
+            type: string 
+        - name: weakness
+          in: query
+          description: enter a valid weakness
+          schema:
+            type: string 
+        - name: comic
+          in: query
+          description: enter a valid comic
+          schema:
+            type: string                                           
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: number   
+                  error:
+                    type: boolean
+                  message:
+                    type: string  
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/HeroeResponse'
+ 
+
+components:
+  schemas:
+    HeroeResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        description:
+          type: string
+        power:
+          type: string
+        comic:
+          type: string
+        weakness:
+          type: string    
+
+    HeroeRequest:
+      type: object
+      properties:
+        description:
+          type: string
+        power:
+          type: string
+        comic:
+          type: string
+        weakness:
+          type: string  
+
+    SwappiPeople:
+      type: object
+      properties:
+        nombre:
+          type: string
+        altura:
+          type: string
+        peso:
+          type: string
+        colorCabello:
+          type: string
+        tes:
+          type: string
+        colorOjos:
+          type: string
+        anioNacimiento:
+          type: string
+        genero:
+          type: string
+        planetaOrigen:
+          type: string
+        fechaRegistro:
+          type: string
+        fechaEdicion:
+          type: string
+        url:
+          type: string
+        peliculas:
+          type: array
+          items:
+            type: string
+        especies:
+          type: array
+          items:
+            type: string
+        vehiculos:
+          type: array
+          items:
+            type: string
+        navesEstelares:
+          type: array
+          items:
+            type: string
+    SwappiPlanet:
+      type: object
+      properties:
+        nombre:
+          type: string
+        periodoRotacion:
+          type: string
+        periodoOrbital:
+          type: string
+        diametro:
+          type: string
+        clima:
+          type: string
+        gravedad:
+          type: string
+        terreno:
+          type: string
+        superficieAgua:
+          type: string
+        poblacion:
+          type: string
+        fechaRegistro:
+          type: string
+        fechaEdicion:
+          type: string
+        url:
+          type: string
+        residentes:
+          type: array
+          items:
+            type: string
+        peliculas:
+          type: array
+          items:
+            type: string

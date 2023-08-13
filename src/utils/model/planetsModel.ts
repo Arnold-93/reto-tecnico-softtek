@@ -1,0 +1,16 @@
+export const planetsModel = {
+    climate: "clima",
+    created: "fechaRegistro",
+    diameter: "diametro",
+    edited: "fechaEdicion",
+    films: "peliculas",
+    gravity: "gravedad",
+    name: "nombre",
+    orbital_period: "periodoOrbital",
+    population: "poblacion",
+    residents: "residentes",
+    rotation_period: "periodoRotacion",
+    surface_water: "superficieAgua",
+    terrain: "terreno",
+    url: "url",
+};

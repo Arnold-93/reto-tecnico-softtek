@@ -1,0 +1,18 @@
+{"level":"info","message":">>>>>>Inicio registro de heroe"}
+{"comic":"MARVEL","description":"Peter Parker ","level":"info","message":">>>>>>Heroe request: {}","power":"Spider-Man","weakness":"Agua"}
+{"level":"info","message":">>>>>>Inicio listado hereos"}
+{"level":"info","message":">>>>>>Inicio listado hereos de DynamoDB"}
+{"level":"info","message":">>>>>>Inicio listado hereos"}
+{"level":"info","message":">>>>>>Inicio listado hereos"}
+{"level":"info","message":">>>>>>Inicio listado hereos"}
+{"level":"info","message":">>>>>>Inicio listado hereos"}
+{"level":"info","message":">>>>>>Inicio listado hereos: {}"}
+{"level":"info","message":">>>>>>Inicio listado hereos"}
+{"level":"info","message":">>>>>>Inicio listado hereos"}
+{"comic":"DC","level":"info","message":">>>>>>Inicio listado hereos"}
+{"level":"info","message":">>>>>>Inicio registro de heroe"}
+{"comic":"MARVEL","description":"capitan america","level":"info","message":">>>>>>Heroe request: ","power":"super fuerza","weakness":"inmortal"}
+{"level":"info","message":">>>>>>Inicio registro en DynamoDB"}
+{"level":"info","message":">>>>>>Fin del registro"}
+{"comic":"MARVEL","level":"info","message":">>>>>>Inicio listado hereos"}
+{"comic":"MARVEL","description":"capitan america","level":"info","message":">>>>>>Inicio listado hereos"}

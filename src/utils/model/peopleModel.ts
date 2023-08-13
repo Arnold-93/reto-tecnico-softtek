@@ -1,0 +1,18 @@
+export const peopleModel = {
+    name: "nombre",
+    height: "altura",
+    mass: "peso",
+    hair_color: "colorCabello",
+    skin_color: "tes",
+    eye_color: "colorOjos",
+    birth_year: "anioNacimiento",
+    gender: "genero",
+    homeworld: "planetaOrigen",
+    films: "peliculas",
+    species: "especies",
+    vehicles: "vehiculos",
+    starships: "navesEstelares",
+    created: "fechaRegistro",
+    edited: "fechaEdicion",
+    url: "url",
+};
